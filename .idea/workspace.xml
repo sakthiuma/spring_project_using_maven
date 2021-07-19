@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b87fe80c-894f-4f66-8530-6ac58af013cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1uaKVZlJwhPnCPtOWIO5Vu777Sq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sakth\IdeaProjects\SpringMvcFromMavenArch\src\main\resources" />
+      <recent name="C:\Users\sakth\IdeaProjects\SpringMvcFromMavenArch\src\main\java\com\example\config" />
+      <recent name="C:\Users\sakth\IdeaProjects\SpringMvcFromMavenArch\src\main\webapp\WEB-INF\jsp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sakth\IdeaProjects\SpringMvcFromMavenArch\src\main\webapp" />
+      <recent name="C:\Users\sakth\IdeaProjects\SpringMvcFromMavenArch\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install tomcat7:run" />
+      <command value="mvn tomcat6:deploy" />
+      <command value="mvn clean install tomcat6:run" />
+      <command value="tomcat6:run-war" />
+      <command value="mvn tomcat67:run-war" />
+      <command value="mvn tomcat6:run-war" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PatientControllerSaTesSuite.testGetPatientById">
+    <configuration name="PatientControllerSaTesSuite.testAddPatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcFromMavenArch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PatientControllerSaTesSuite" />
+      <option name="METHOD_NAME" value="testAddPatient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientControllerSaTesSuite.testGetAllPatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcFromMavenArch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PatientControllerSaTesSuite" />
+      <option name="METHOD_NAME" value="testGetAllPatient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientControllerSaTesSuite.testGetPatientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcFromMavenArch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PatientControllerSaTesSuite" />
+      <option name="METHOD_NAME" value="testGetPatientById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceSaTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcFromMavenArch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PatientServiceSaTestSuite" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceSaTestSuite.testDeleteAllPatients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcFromMavenArch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PatientServiceSaTestSuite" />
+      <option name="METHOD_NAME" value="testDeleteAllPatients" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PatientControllerSaTesSuite.testGetPatientById" />
+        <item itemvalue="JUnit.PatientControllerSaTesSuite.testGetAllPatient" />
+        <item itemvalue="JUnit.PatientServiceSaTestSuite.testDeleteAllPatients" />
+        <item itemvalue="JUnit.PatientControllerSaTesSuite.testAddPatient" />
+        <item itemvalue="JUnit.PatientServiceSaTestSuite" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b87fe80c-894f-4f66-8530-6ac58af013cd" name="Default Changelist" comment="" />
+      <created>1624898283570</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624898283570</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.jsp" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625073925784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1625073925784" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1626622168111">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624900044474" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1626622168111" />
+    <state x="254" y="270" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625581656460">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="254" y="270" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1625581656460" />
+    <state x="395" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625411521742">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="395" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1625411521742" />
+    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625509528406">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625509528406" />
+    <state x="623" y="60" key="#xdebugger.evaluate" timestamp="1626576864643">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="623" y="60" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1626576864643" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1625075733558">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1625075733558" />
+    <state width="1237" height="7" key="GridCell.Tab.0.bottom" timestamp="1626624004047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="313" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624902979523" />
+    <state width="1237" height="7" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626624004047" />
+    <state width="1237" height="7" key="GridCell.Tab.0.center" timestamp="1626624004047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="313" key="GridCell.Tab.0.center/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624902979522" />
+    <state width="1237" height="7" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1626624004047" />
+    <state width="1237" height="7" key="GridCell.Tab.0.left" timestamp="1626624004047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="313" key="GridCell.Tab.0.left/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624902979521" />
+    <state width="1237" height="7" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1626624004047" />
+    <state width="1237" height="7" key="GridCell.Tab.0.right" timestamp="1626624004047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="313" key="GridCell.Tab.0.right/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624902979522" />
+    <state width="1237" height="7" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1626624004047" />
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1626577375003">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1626577375003" />
+    <state width="1237" height="2" key="GridCell.Tab.1.center" timestamp="1626577375003">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1626577375003" />
+    <state width="1237" height="2" key="GridCell.Tab.1.left" timestamp="1626577375003">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1626577375003" />
+    <state width="1237" height="2" key="GridCell.Tab.1.right" timestamp="1626577375003">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1626577375003" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1626537961409">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1626537961409" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1626111588604">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624901564346" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1626111588604" />
+    <state width="531" height="446" key="SwitcherDM" timestamp="1626537441054">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="531" height="446" key="SwitcherDM/0.0.1280.680@0.0.1280.680" timestamp="1626537441054" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1626666397231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1626666397231" />
+    <state x="91" y="45" key="new project wizard" timestamp="1625075120581">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="45" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1625075120581" />
+    <state x="591" y="151" width="672" height="677" key="run.anything.popup" timestamp="1625073984115">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="591" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680/-1920.-93.1920.1040@0.0.1280.680" timestamp="1624902233951" />
+    <state x="591" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1625073984115" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1626537407376">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1626537407376" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/PatientControllerSaTesSuite.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/config/PatientController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/config/service/PatientService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/PatientServiceSaTestSuite.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.2.6.RELEASE/spring-test-4.2.6.RELEASE.jar!/org/springframework/mock/web/MockHttpServletRequest.class</url>
+          <line>225</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.2.6.RELEASE/spring-test-4.2.6.RELEASE.jar!/org/springframework/mock/web/MockHttpServletRequest.class</url>
+          <line>582</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/PatientControllerSaTesSuite.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/config/PatientController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/config/service/PatientService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/PatientControllerSaTesSuite.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
