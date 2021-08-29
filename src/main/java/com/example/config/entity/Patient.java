@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "patient")
 @EqualsAndHashCode
 public class Patient {
     @Id

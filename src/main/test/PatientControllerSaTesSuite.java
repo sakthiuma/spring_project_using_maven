@@ -18,11 +18,16 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import static org.junit.Assert.assertNotNull;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -33,6 +38,9 @@ public class PatientControllerSaTesSuite {
     @Autowired
     WebApplicationContext webApplicationContext;
 
+    @Autowired
+    EntityManagerFactory entityManagerFactory;
+
     @InjectMocks
     PatientController patientController;
 
@@ -42,8 +50,16 @@ public class PatientControllerSaTesSuite {
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(patientController).build();
-
+        clearDb();
     }
+
+    private void clearDb() {
+        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createNativeQuery("truncate table patient").executeUpdate();
+        entityManager.getTransaction().commit();
+    }
+
     @Test
     public void testIndexPage() throws Exception {
         mockMvc.perform(get("/home"))
@@ -64,26 +80,96 @@ public class PatientControllerSaTesSuite {
 
     @Test
     public void testGetAllPatient() throws Exception {
-        Patient patient1 = new Patient("Ram");
-        Patient patient2 = new Patient("Ramesh");
-        patientService.addPatient(patient1);
-        patientService.addPatient(patient2);
-
         mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        mockMvc.perform(post("/addPatient?patientName=Meena"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(post("/addPatient?patientName=Reena"))
+                .andExpect(status().isOk())
+                .andReturn();
+        Patient patient1 = new Patient("Meena");
+        patient1.setPatientId(1); // this is for testing purpose
+        Patient patient2 = new Patient("Reena");
+        patient2.setPatientId(2); // this is for testing purpose
+
+        List<Patient> patientList = Arrays.asList(patient1, patient2);
+        when(patientService.getAllPatients()).thenReturn(patientList);
         MvcResult result = mockMvc.perform(get("/getAllPatient"))
                 .andExpect(status().isOk())
+                .andExpect(view().name("displayrecords"))
+                .andExpect(model().attribute("patientList", patientList))
                 .andReturn();
         assertNotNull(result.getResponse().getContentAsString());
         System.out.println("output" + result.getResponse().getContentAsString());
     }
 
     @Test
+    public void testEmptyPatientList() throws Exception {
+        mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        mockMvc.perform(get("/getAllPatient"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("displayrecords"))
+                .andExpect(model().attribute("patientList", Collections.emptyList()))
+                .andReturn();
+    }
+
+    @Test
     public void testGetPatientById() throws Exception {
         mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
-        MvcResult result = mockMvc.perform(get("/getPatient/2"))
+        mockMvc.perform(post("/addPatient?patientName=Ram"))
                 .andExpect(status().isOk())
+                .andReturn();
+        MvcResult result = mockMvc.perform(get("/getPatient/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("Welcome"))
+                .andExpect(model().attribute("name", "Ram"))
                 .andReturn();
         assertNotNull(result.getResponse().getContentAsString());
         System.out.println("output" + result.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void testInvalidPatientId() throws Exception {
+        mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        mockMvc.perform(get("/getPatient/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("error"))
+                .andExpect(model().attribute("errormsg", "Invalid user record"))
+                .andReturn();
+    }
+
+    @Test
+    public void testUpdatePatient() throws Exception {
+        mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        mockMvc.perform(post("/addPatient?patientName=Ram"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(post("/updatePatient/1?name=Rama"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(get("/getPatient/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("Welcome"))
+                .andExpect(model().attribute("name", "Rama"))
+                .andReturn();
+    }
+
+    @Test
+    public void testDeleteAllPatients() throws Exception {
+        mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        mockMvc.perform(post("/addPatient?patientName=Ram"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(post("/addPatient?patientName=Meena"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(delete("/deleteAll"))
+                .andExpect(status().isOk())
+                .andReturn();
+        mockMvc.perform(get("/getAllPatient"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("displayrecords"))
+                .andExpect(model().attribute("patientList", Collections.emptyList()))
+                .andReturn();
     }
 }

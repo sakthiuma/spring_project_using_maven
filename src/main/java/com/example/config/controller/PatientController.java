@@ -4,7 +4,13 @@ import com.example.config.entity.Patient;
 import com.example.config.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class PatientController {
@@ -12,26 +18,47 @@ public class PatientController {
     PatientService patientService;
 
     @RequestMapping("/home")
-    public String home() {
+    public String home(Model model) {
+        model.addAttribute("patient", new Patient());
         return "login";
     }
 
-    @RequestMapping("/addPatient")
-    @ResponseBody
-    public String submit(@RequestParam("patientName") String patientName) {
-        return String.valueOf(patientService.addPatient(new Patient(patientName)).getPatientId());
+    @RequestMapping(value = "/addPatient", method = RequestMethod.POST)
+    public ModelAndView submit(@ModelAttribute("patient") Patient inPatient) {
+        final ModelAndView mv= new ModelAndView("Welcome");
+        System.out.println(inPatient.toString());
+        mv.addObject("name", inPatient.getPatientName());
+        patientService.addPatient(inPatient);
+        return mv;
     }
 
     @RequestMapping("/getAllPatient")
     @ResponseBody
-    public String getAllPatient() {
-        return patientService.getAllPatients().toString();
+    public ModelAndView getAllPatient() {
+        patientService.getAllPatients().toString();
+        ModelAndView mv = new ModelAndView("displayrecords");
+        final List<Patient> patientList = patientService.getAllPatients();
+        patientList.stream().forEach(System.out::println);
+        mv.addObject("patientList", patientList);
+        return mv;
     }
 
     @RequestMapping("/getPatient/{id}")
     @ResponseBody
-    public String getPatientById(@PathVariable("id") int patientId) {
-        return patientService.getPatientById(patientId).get().getPatientName();
+    public ModelAndView getPatientById(@PathVariable("id") int patientId) {
+        final Optional<Patient> patientOptional = patientService.getPatientById(patientId);
+        if (patientOptional.isPresent()) {
+            Patient patient = patientService.getPatientById(patientId).get();
+            final ModelAndView mv= new ModelAndView("Welcome");
+            System.out.println(patient.toString());
+            mv.addObject("name", patient.getPatientName());
+            return mv;
+        } else {
+            final ModelAndView mv = new ModelAndView("error");
+            mv.addObject("errormsg" , "Invalid user record");
+            return mv;
+        }
+
     }
 
     @RequestMapping("/deleteAll")
